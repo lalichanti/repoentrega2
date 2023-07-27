@@ -1,0 +1,43 @@
+.navegador{
+    background-color: $fondo-primario;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    font-family: Arial,sans-serif;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media(max-width:1200px){
+        position: static;
+    }
+    .icono{
+     margin: 10px;
+    }
+    .menu{
+        display: none;
+        @media(max-width:576px){
+           display: block;
+           color: white;
+           font-size: 30px;
+           margin: 10px;
+           order: -1;
+        }
+       }
+    ul{
+     list-style: none;
+     display: flex;
+     justify-content: end;
+     margin: 0;
+     @media(max-width:576px){
+        display: none;
+     }
+     li a{
+         color: blueviolet;
+         list-style: none;
+         display: block;
+         padding: 10px 10px;
+     }
+    }
+ 
+ }

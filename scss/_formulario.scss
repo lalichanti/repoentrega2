@@ -1,0 +1,82 @@
+.formulario {
+    width: 768px;
+    font-size: 18px;
+    margin: 30px auto;
+    border-radius: 5px;
+    color: white;
+    padding: 30px;
+    background-color: rgb(177, 119, 232);
+    box-shadow: 10px 5px 15px 5px #000000;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    @media(max-width:768px){
+        width: auto;
+        border-radius: 0px;
+        grid-template-columns: 1fr;
+        row-gap: 40px; 
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    @media(min-width:576px){
+        grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+      align-items: center;
+    }
+    
+    .input {
+      width: 260px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      color: white;
+      @media(max-width:768px){
+        width: auto;
+      @media(min-width:576px){
+        .dato .nombre{
+            grid-column: 1/3;
+        }
+        .dato.apellido{
+            grid-column: 3/5;
+        }
+        .dato.tel{
+            grid-column: 1/2; 
+        }
+        .dato.mail{
+            grid-column: 2/4; 
+        }
+        .dato.terminos{
+            grid-column: 1/3;
+        }
+
+        }  
+      }
+    
+      &:focus {
+        border: none;
+        border-bottom: 2px solid white;
+        outline: none;
+        color: white;
+      }
+    }
+      .input-terminos {
+      grid-column: 2 span;
+      text-align: left;
+      @media(max-width:768px){
+        grid-column: auto;
+        text-align: left;
+        flex-direction: row;
+      }
+    }
+      button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: violet;
+      width: 100px;
+      height: 30px;
+      
+    }
+  }
