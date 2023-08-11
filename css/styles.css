@@ -7,7 +7,7 @@
 }
 
 .navegador {
-  background-color: aqua;
+  background-color: rgb(0, 229, 255);
   top: 0;
   height: 100px;
   width: 100%;
@@ -37,6 +37,12 @@
     order: -1;
   }
 }
+.navegador .menu:hover + ul {
+  left: 0px;
+}
+.navegador ul:hover {
+  left: 0px;
+}
 .navegador ul {
   list-style: none;
   display: flex;
@@ -45,11 +51,23 @@
 }
 @media (max-width: 576px) {
   .navegador ul {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    background-color: white;
+    width: 80vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 100px;
+    transition: 0.5s;
   }
 }
-.navegador ul li a {
-  color: blueviolet;
+.navegador li a {
+  font-size: 20px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.251);
+  color: rgb(64, 43, 226);
   list-style: none;
   display: block;
   padding: 10px 10px;
@@ -81,6 +99,16 @@
   }
 }
 
+.carousel-caption h3 {
+  font-size: 48px;
+  text-shadow: 2px 2px 3px black;
+}
+
+.carousel-caption p {
+  font-size: 30px;
+  text-shadow: 2px 2px 3px black;
+}
+
 .productos {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +136,7 @@
 }
 .producto .boton {
   width: auto;
-  background-color: aqua;
+  background-color: rgb(0, 229, 255);
   color: black;
   border-radius: 5px;
   margin: 10px;
@@ -145,9 +173,19 @@
   padding: 40px;
 }
 .piePagina .mapa {
-  width: 150%;
+  width: 100%;
   height: 200px;
   border-radius: 8px;
+  margin: 0 auto;
+  margin-left: -30px;
+}
+@media (max-width: 768px) {
+  .piePagina .mapa .mapa {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-right: 0;
+  }
 }
 .piePagina .redes {
   font-size: 32px;
@@ -297,6 +335,14 @@
   background-color: violet;
   width: 100px;
   height: 30px;
+}
+
+.body .info .relato {
+  float: center;
+  margin: 5px;
+  font-size: 20px;
+  color: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
